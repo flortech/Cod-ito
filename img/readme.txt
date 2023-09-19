@@ -1,0 +1,1 @@
+Agregar las imagenes en carpetas por categoría. 
