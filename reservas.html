@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="JS/+info.js"></script>
+    <title>Reservas</title>
+</head>
+<body>
+    <div class="background"><img src="img/background1.jpg" alt="Sierras Grandes"></div>
+    <header>
+
+    </header>
+    <main class="reservas">
+        <h1>Reservas</h1>
+        <section class="caracteristicas">
+            <div class="cabañasbox">
+                <h2 >Cabañas</h2>
+                <div class="carrusel 1">
+                        <img src="img/cabaña.ejemplo.jpg" alt="">
+
+                        
+                </div>
+                <button id="cabañainfo">+Info</button>
+                <button id="cabañareserva">Reservar</button>
+                <h3>Caracteristicas</h3>
+                <ul>
+                    <li>Capacidad: 6 personas</li>
+                    <li>Habitaciones: 3</li>
+                    <li>Baños: 1</li>
+                    <li>Camas: 2 matrimoniales 1 cucheta.</li>
+                    <li>Estacionamiento: Si</li>
+                </ul>
+
+                <h3>Servicios</h3>
+                <ul>
+                    <li>Wi-Fi Grátis</li>
+                    <li>TV </li>
+                    <li>Blancos</li>
+                    <li>Agua caliente</li>
+                    <li>Platos y vasos</li>
+                    <li>Cocina</li>
+                    <li>Parrilla</li>
+                    <li>Desayuno en Bar de 6 a 10 am</li>
+                </ul>
+            </div>
+
+            <div class="bungalowsbox">
+                <h2 >Bungalows</h2>
+                <div class="carrusel 2">
+                    <img src="img/Bungalows.ejemplo.jpg" alt="">
+
+                </div>
+                    <button id="bungalowsinfo">+Info</button>
+                    <button id="bungalowsreserva">Reservar</button>
+                <h3>Caracteristicas</h3>
+                <ul>
+                    <li>Capacidad: 2 personas</li>
+                    <li>Habitaciones: 1</li>
+                    <li>Baños: 1</li>
+                    <li>Camas: 2 simples</li>
+                    <li>Estacionamiento: Si</li>
+
+                </ul>
+
+                <h3>Servicios</h3>
+                <ul>
+                    <li>Wi-Fi Grátis</li>
+                    <li>TV </li>
+                    <li>Blancos</li>
+                    <li>Agua caliente</li>
+                    <li>Parrilla</li>
+                    <li>Desayuno en Bar de 6 a 10 am</li>
+                </ul>
+
+            </div>
+        </section>
+     
+
+        <form class="section-reserva">
+            <h3>Datos de reserva</h3>
+            <div class="div1">
+                <label for="nombre">Nombre y Apellido</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Pedro Picapiedras" autocomplete="none">
+            </div>
+
+            <div class="div2">   
+                <label for="DNI">DNI</label>
+                <input type="text" name="DNI" id="DNI" placeholder="99.999.999" autocomplete="none">
+            </div>
+            
+            <div class="div3">
+                <label for="cantidadpers">Cantidad</label>
+                <input type="number" name="cantidadpers"  id="cantidadpers" max="6" min="1" placeholder="1">
+            </div>
+
+            <div class="div4">
+                <label for="date-enter">Fecha Entrada</label>
+                <input type="date" name="date" id="date-enter" autocomplete="bday-month">
+            </div>
+
+            <div class="div5">
+                <label for="date-out">Fecha Salida</label>
+                <input type="date" name="date" id="date-out" autocomplete="bday-month">
+            </div>
+
+            <div class="div6">
+                <label for="type">Tipo</l>
+                <select name="type" id="type">
+                        <option>Cabaña</option>
+                        <option>Bungalow</option>                
+                </select>
+            </div>
+                          
+            <div class="div7">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="example@example.com" autocomplete="email">
+            </div>
+            <div class="div8">
+                <label for="telefono">Telefono</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="011 12345678">
+            </div>
+            <button id="reservar-ok">Reservar</button>
+            <button id="reservar-no">Cancelar</button>
+
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
