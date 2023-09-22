@@ -1,16 +1,17 @@
-/*///header////*/
+
 *{
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+/*ESTILOS DE HEADER - SOLO NICO*/
 body {
     background-color:  #D5B9B2;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
+
 }
 .header{
     background-color: #353535    ;
@@ -25,7 +26,7 @@ body {
 }
 
 .header .logo img{
-    max-height: 60px;    
+    max-height: 60px;
     width: auto;
 }
 
@@ -49,7 +50,7 @@ body {
     font-weight: bold;
     font-style: italic;
 }
-/*// Footer///*/
+/*ESTILO FOOTER - SOLO NICO*/
 footer{
     background-color:#353535 ;
     margin-top: auto;
@@ -94,3 +95,195 @@ footer div {
     align-self: center;
   }
 
+/*/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*ESTILO INDEX - SOLO MATIAS*/
+
+
+/*ESTILO PROPUESTA TURISTICA - SOLO MATIAS*/
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*ESTILOS RESERVAS - SOLO FACUNDO*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.background{
+    position: fixed;
+    width: 100vw;
+    top:-300px;
+    height: auto;
+    z-index: -1;
+}
+
+
+
+.reservas{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.caracteristicas{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: start;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+h1,h2,h3{
+    color: #67AC5B;
+}
+h1{
+    grid-column: 1/12;
+}
+
+li{
+    list-style: none;
+    text-decoration: none;
+}
+
+button{
+    border-radius: 15px;
+    background-color:#67AC5B;
+    height: 3rem;
+    width: 20%;
+
+    
+}
+
+button:hover{
+    background-color: #D5B9B2;
+    transition: 1s;
+}
+
+#reservar-ok:hover{
+    background-color: #D5B9B2;
+    transition: 1s;
+    
+}
+#reservar-no:hover{
+    background-color: #f13000;
+    transition: 1s;
+    
+}
+
+
+
+.cabañasbox,.bungalowsbox{
+    background-color: #353535;
+    width: 90%;
+    padding: 15px;
+    margin: 0 15px;
+    overflow: hidden;
+    height: 50%;
+    transition: height 0.3s ease-in-out;
+}
+
+.cabañasbox.info-visible,
+.bungalowsbox.info-visible{
+    height: auto;
+}
+.carrusel{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.carrusel>img{
+    width: 200px;
+}
+
+.section-reserva{
+ 
+    display: none;
+   
+}
+
+.section-reserva.mostrar {
+    margin: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    min-height: 200px;
+    align-items: center;
+    font-size: 1rem;
+    position: fixed;
+    top:0;
+    left: 7%;
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    box-shadow: #353535 0 0 20px 10px;
+    background-color: rgba(81, 90, 92, 0.911); 
+    z-index: 1000; 
+    transition: opacity 0.5s ease; 
+}
+
+.section-reserva>div>input{
+    font-size: 1rem;
+    text-align: center;
+    height: 2rem;
+    border-radius: 15px;
+}
+
+.section-reserva>div{
+    padding: 20px;
+}
+.section-reserva>h3{
+    grid-column: 1/13;
+}
+
+.div1{
+    grid-column: 1/5;
+}
+.div2{
+    grid-column: 5/9;
+}
+.div3{
+    grid-column: 9/13;
+}
+.div4{
+    grid-column: 1/5;
+}
+.div5{
+    grid-column: 5/9;
+}
+.div6{
+    grid-column: 9/13;
+}
+.div7{
+    grid-column: 1/7;
+}
+.div8{
+    grid-column: 7/13;
+}
+
+#reservar-ok, #reservar-no{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    width: 50%;
+    min-width: fit-content;
+}
+.section-reserva #reservar-ok{
+    grid-column: 1/7;
+    justify-self: center;
+}
+
+.section-reserva #reservar-no{
+    grid-column: 7/13;
+    justify-self: center;
+}
+
+.section-reserva label{
+    color:#D5B9B2;
+    font-size: 1.2rem;
+}
+
+.section-reserva div select{
+    font-size: 1rem;
+}
