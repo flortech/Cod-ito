@@ -318,8 +318,63 @@ button:hover{
 
 /*////////////////////////////////////contactos SOLO TINCHO/////////////////////////////////////////////*/
 
+/* Estilos para el cuerpo de la página */
+.c-datos {
+    background-image: url('./IMG/DiqueNogoli.jpg'); /* ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija en su posición al hacer scroll */
+}
+
+/* Estilos para las secciones */
+.c-datos>section {
+background-color: white;
+margin: 20px;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Estilos para el formulario de contacto */
+.c-datos form {
+margin-top: 10px;
+}
+
+.c-datos label {
+display: block;
+margin-bottom: 5px;
+color: #67AC5B;
+}
+
+.c-datos input[type="text"],
+.c-datos input[type="email"],
+textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #67AC5B;
+border-radius: 5px;
+}
+
+.c-datos input[type="submit"] {
+background-color: #67AC5B;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.c-datos input[type="submit"]:hover {
+background-color: #353535;
+}
+.c-mapa{
+padding: 20px;
+overflow: hidden;
+}
+
 @media screen and (max-with: 768px){
     .caracteristicas{
         display: block;
         }
 }
+
