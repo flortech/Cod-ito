@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./IMG/DiqueNogoli.jpg'); /* ruta de la imagen de fondo */
+            background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-attachment: fixed; /* Mantiene la imagen fija en su posición al hacer scroll */
+            color: #353535;
+            margin: 0;
+            padding: 0;
+        }
+
+/* Estilos para el encabezado */
+header {
+    background-color: #67AC5B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para las secciones */
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los títulos de sección */
+h2 {
+    color: #67AC5B;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #67AC5B;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el formulario de contacto */
+form {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #67AC5B;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #67AC5B;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #67AC5B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #353535;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+    </header>
+    <section>
+        <h2>Datos de la Empresa</h2>
+        <p>Parador del Condor</p>
+        <p>Teléfono: 011-12345678</p>
+        <p>Correo Electrónico: administracion@paradorcondor.com</p>
+        <p>Dirección: Camino Perilago, Nogoli, San Luis, Argentina</p>
+    </section>
+    <section>
+        <h2>Horario de Administracion</h2>
+        <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+        <p>Sábados: 10:00 AM - 4:00 PM</p>
+        <p>Domingos: Cerrado</p>
+    </section>
+    <section>
+        <h2>Reservas</h2>
+        <p>Para realizar reservas, por favor llámenos al teléfono mencionado arriba o mediante correo electrónico.</p>
+    </section>
+    <section>
+        <h2>Contáctenos</h2>
+        <p>Si tiene alguna pregunta o comentario, por favor envianos el mismo en el siguiente formulario:</p>
+        <form action="procesar_formulario.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+            <br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+    <section>
+        <h2>Encontranos</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22530.150821932937!2d-66.30265491321394!3d-32.921243802338665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d45efaa6e3f1cb%3A0xdaf0e6af627f8590!2sDique%20Nogol%C3%AD!5e0!3m2!1ses!2sar!4v1695597076011!5m2!1ses!2sar"
+            width="1800"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </section>
+</body>
+</html>
