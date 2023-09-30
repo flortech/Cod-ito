@@ -7,25 +7,17 @@
 }
 /*ESTILOS DE HEADER - SOLO NICO*/
 body {
+    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url(Backgrounds\en-el-corazon-de-las.jpg);
+    background-color: #ffffff;
 }
-.back {
-    height: 100vh;
-    width: 100vh;
-    z-index: -1;
+/*.background{
+    size;
     position: fixed;
-}
-.background {
     z-index: -1;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    object-fit:fill;
-}
-
+}*/
 header{
     background-color: #353535    ;
     align-items:center ;
@@ -62,7 +54,7 @@ header .links-nav li:hover{
 
 header .links-nav a {
     font-size: 30px;
-    color:   #D5B9B2;
+    color:   #bcb78a;
     font-weight: bold;
     font-style: italic;
     cursor: pointer;
@@ -80,7 +72,7 @@ footer{
     justify-content: space-around;
 }
 footer div {
-    color:   #D5B9B2;
+    color:   #bcb78a;
 }
 footer .caja1 figure img{
     max-height: 55%;
@@ -102,7 +94,7 @@ footer .caja1{
 .social {
     align-self: center;
     grid-column: 4/6;
-    color:   #D5B9B2;
+    color:   #bcb78a;
 }
 .redes a { 
     text-decoration: none;
@@ -112,7 +104,7 @@ footer .caja1{
     line-height: 50px;
     text-align: center;
     background: #314652;
-    color: #f1f1f1;
+    color: #ffffff;
     border-radius: 50%;
   }
 .redes{
@@ -152,15 +144,17 @@ footer .caja1{
 }
 .caracteristicas{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2,1fr);
     align-items: start;
     align-content: center;
     justify-content: space-around;
     justify-items: center;
+    margin-bottom: 15px;
 }
 
+
 h1,h2,h3{
-    color: #67AC5B;
+    color: #bcb78a;
 }
 h1{
     grid-column: 1/12;
@@ -169,19 +163,23 @@ h1{
 li{
     list-style: none;
     text-decoration: none;
+    color: #ffffff;
 }
 
 button{
     border-radius: 15px;
-    background-color:#67AC5B;
+    background-color:#bcb78a;
     height: 3rem;
-    width: 20%;
-
-    
+    min-width: 20%;
+    max-width: 50%;
+    border-style: none;
+    box-shadow: 0 0 5px 0 #353535;
+    margin: 10px;
+    color: #314652;
 }
 
 button:hover{
-    background-color: #D5B9B2;
+    background-color: #ffffff;
     transition: 1s;
 }
 
@@ -197,30 +195,35 @@ button:hover{
 }
 
 
-
 .cabañasbox,.bungalowsbox{
-    background-color: #353535;
-    width: 90%;
+    background-color: #225253d0;
+    width: 95%;
     padding: 15px;
     margin: 0 15px;
     overflow: hidden;
-    height: 50%;
+    height: 60%;
     transition: height 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow:  0 -10px 15px 5px #353535a8 inset;
 }
 
 .cabañasbox.info-visible,
 .bungalowsbox.info-visible{
     height: auto;
+    box-shadow: 0 0 15px 1px #353535a8;
 }
 .carrusel{
-    height: 250px;
+    height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
 
 }
 .carrusel>img{
-    width: 200px;
+    height: 10rem;
+    
 }
 
 .section-reserva{
@@ -311,4 +314,12 @@ button:hover{
 
 .section-reserva div select{
     font-size: 1rem;
+}
+
+
+
+@media screen and (max-with: 768px){
+    .caracteristicas{
+        display: block;
+        }
 }
