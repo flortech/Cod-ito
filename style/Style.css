@@ -115,7 +115,28 @@ footer .caja1{
 /*/////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*ESTILO INDEX - SOLO MATIAS*/
+p{
+    color: #353535;
+    text-align: center;
+    font-size: 30px;
 
+}
+
+.slider-container {
+    display: flex;
+    width: 80%;
+    height: 75vh;
+    overflow-x: scroll   
+
+    }
+
+    .slider-container img {        
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: fill;      
+
+    scroll-snap-align: center;
+    }
 
 /*ESTILO PROPUESTA TURISTICA - SOLO MATIAS*/
 
