@@ -428,3 +428,8 @@ overflow: hidden;
     font-style: italic;
     text-decoration: none;
 }
+
+.c-wrapper>div>p>a{
+    color: #ffffff;
+    font-weight: 700;
+}
