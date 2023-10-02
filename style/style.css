@@ -364,16 +364,6 @@ button:hover{
     background-attachment: fixed;
 }
 
-.c-datos form {
-margin-top: 10px;
-}
-
-.c-datos label {
-display: block;
-margin-bottom: 5px;
-color: #67ac5b;
-}
-
 .c-datos input[type="text"],
 .c-datos input[type="email"],
 textarea {
@@ -401,12 +391,6 @@ padding: 20px;
 overflow: hidden;
 }
 
-@media screen and (max-with: 768px){
-    .caracteristicas{
-        display: block;
-        }
-}
-
 .c-wrapper{
     display: flex;
 }
@@ -425,10 +409,9 @@ overflow: hidden;
 
     & > p {
         font-size: 20px;
-        color:   #ffffff;
+        color: #ffffff;
         font-weight: bold;
         font-style: italic;
-        cursor: pointer;
         text-decoration: none;
     }
     
@@ -443,6 +426,5 @@ overflow: hidden;
     color:   #ffffff;
     font-weight: bold;
     font-style: italic;
-    cursor: pointer;
     text-decoration: none;
 }
