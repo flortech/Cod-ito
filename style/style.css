@@ -19,16 +19,8 @@ body {
     z-index: -1;
 }*/
 header{
-    background-color: #353535    ;
-    align-items:center ;
-    justify-content: center;
     display: flex;
-    height: 85px;
-    padding: 5px 10%;
-    align-self: center;
-    width: 100%;
-    position: sticky;
-    top: 0px;
+    flex-direction: column;
 }
 
 header .logo img{
@@ -36,23 +28,46 @@ header .logo img{
     width: auto;
 }
 
-header .links-nav{
+.carousel {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.carouselimg {
+    width: 300%;
+    display: flex;
+    background-color: red;
+}
+
+.carouselimg img {
+    width: 100%;
+    height: 70vh;
+}
+
+/*/NAV bar*/
+
+nav {
+    background-color: #353535
+}
+
+.links-nav{
     display: flex;
     list-style: none;
 }
 
-
-header .links-nav li {
+.links-nav li {
     display: inline-block;
     padding: 0 20px;
 }
 
-header .links-nav li:hover{
+.links-nav li:hover{
     transform: scale(1.1);
     filter: brightness(150%);
 }
 
-header .links-nav a {
+.links-nav a {
     font-size: 30px;
     color:   #bcb78a;
     font-weight: bold;
@@ -60,6 +75,8 @@ header .links-nav a {
     cursor: pointer;
     text-decoration: none;
 }
+
+
 /*ESTILO FOOTER - SOLO NICO*/
 footer{
     background-color:#353535 ;
