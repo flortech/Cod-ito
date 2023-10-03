@@ -24,6 +24,7 @@ header{
     justify-content: center;
     display: flex;
     height: 85px;
+    flex-direction: column;
     padding: 5px 10%;
     align-self: center;
     width: 100%;
@@ -37,23 +38,46 @@ header .logo img{
     width: auto;
 }
 
-header .links-nav{
+.carousel {
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.carouselimg {
+    width: 300%;
+    height: 30%;
+    display: flex;
+    background-color: red;
+}
+
+.carouselimg img {
+    width: 100%;
+    height: 90vh;
+}
+
+/*/NAV bar*/
+
+nav {
+    background-color: #353535
+}
+
+.links-nav{
     display: flex;
     list-style: none;
 }
 
-
-header .links-nav li {
+.links-nav li {
     display: inline-block;
     padding: 0 20px;
 }
 
-header .links-nav li:hover{
+.links-nav li:hover{
     transform: scale(1.1);
     filter: brightness(150%);
 }
 
-header .links-nav a {
+.links-nav a {
     font-size: 30px;
     color:   #bcb78a;
     font-weight: bold;
@@ -61,6 +85,8 @@ header .links-nav a {
     cursor: pointer;
     text-decoration: none;
 }
+
+
 /*ESTILO FOOTER - SOLO NICO*/
 footer{
     background-color:#353535 ;
