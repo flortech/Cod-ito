@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel");
 
   let intervalo = null;
-  let step = 1;
+  let step = 3;
   let scrolling = false;
-  let direction = 1; // Dirección del desplazamiento: 1 para adelante, -1 para atrás
+  let direction = 1; // direc: 1 para adelante, -1 para atrás
 
   const start = () => {
     if (intervalo === null) {
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       intervalo = setInterval(function () {
         carousel.scrollLeft += step * direction;
 
-        // Verificar si llegamos al final y cambiar la dirección
+        // se verifica si llega al final y cambia direc
         if (
           direction === 1 &&
           carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth
