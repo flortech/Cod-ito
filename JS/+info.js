@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  carousel.addEventListener("mouseenter", () => {
+  /*carousel.addEventListener("mouseenter", () => {
     stop();
   });
 
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!scrolling) {
       start();
     }
-  });
+  });*/
 
   start();
 });
