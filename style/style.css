@@ -145,8 +145,8 @@ nav {
 
 .links-nav li:after {
     content:" ";
-    background-color: red ;
-    height: 4px;
+    background-color: #4aabe4 ;
+    height: 2px;
     width: 0;
     position:absolute;
     bottom: 0;

@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel");
 
   let intervalo = null;
-  let step = 3;
+  let step = 1;
   let scrolling = false;
   let direction = 1; // direc: 1 para adelante, -1 para atrás
 
