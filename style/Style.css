@@ -517,6 +517,9 @@ overflow: hidden;
         margin-right:5px;
     }
 
+
+    /*//////////////////////////////////////////////////////Reservas//////////////////////////////////////////////////////////////*/
+
     .caracteristicas{
         display: flex;
         flex-direction: column;
@@ -585,7 +588,7 @@ overflow: hidden;
         font-size: 12px;
         margin: 0px;
     }
-
+/*//////////////////////////////////////////////////////////contactos?///////////////////////////////////////////////////////////*/
    
 }
 @media screen and (max-width: 320px) and (max-height: 480px){
