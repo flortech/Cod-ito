@@ -13,7 +13,7 @@
     <title>Reservas</title>
 </head>
 <body>
-    <header>
+    <header>        
         <div class="carousel">
             <div class="carouselgrande">
                 <img src="Backgrounds/ASASADA.jpg" alt="Imagen 1">
@@ -23,18 +23,18 @@
         </div>
         <div class="logo">
             <img src="img/android-chrome-192x192.png" >
-        </div>
-        <nav class="h-nav">
-            <ul class="links-nav">  
-                <li><a href="Index.html">Home</a></li>
-                <li><a>Turismo</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
-                <li><a href="contacto.html">Contactanos</a></li>
-            </ul>
-        </nav>
+        </div>    
     </header>
+
+    <nav class="h-nav">
+        <ul class="links-nav">  
+            <li><a href="Index.html">Home</a></li>
+            <li><a>Turismo</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="contacto.html">Contactanos</a></li>
+        </ul>
+    </nav>
     <main class="reservas">
-        <h1>Reservas</h1>
         <section class="caracteristicas">
             <div class="cabañasbox">
                 <h2 >Cabañas</h2>
@@ -142,9 +142,10 @@
                 <label for="telefono">Telefono</label>
                 <input type="tel" name="telefono" id="telefono" placeholder="011 12345678">
             </div>
-            <button id="reservar-ok">Reservar</button>
-            <button id="reservar-no">Cancelar</button>
-
+            <div id="r-buttons">
+                <button id="reservar-ok">Reservar</button>
+                <button id="reservar-no">Cancelar</button>
+            </div>
         </form>
     </main>
     <footer>
