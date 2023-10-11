@@ -516,6 +516,29 @@ overflow: hidden;
     .caja3{
         margin-right:5px;
     }
+    
+    nav {
+        display: flex;
+    }
+    .links-nav {
+
+        background-color:#353535 ;
+        right: 0;
+    }
+    .links-nav a {
+        font-size: 10px;
+        color:   #bcb78a;
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: none;
+        padding: 0px;
+    }
+    .links-nav li:hover::after{
+        display: none;
+    }
+    .links-nav li:after {
+       display:none;
+    }
 
 
     /*//////////////////////////////////////////////////////Reservas//////////////////////////////////////////////////////////////*/
