@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="JS/+info.js"></script>
+    <script src="JS/reserva.js"></script>
     <title>Reservas</title>
 </head>
 <body>
@@ -98,7 +99,7 @@
             </div>
         </section>
 
-        <form class="section-reserva">
+        <form class="section-reserva" onsubmit="return validacion()">
             <h3>Datos de reserva</h3>
             <div class="div1">
                 <label for="nombre">Nombre y Apellido</label>
@@ -107,7 +108,7 @@
 
             <div class="div2">   
                 <label for="DNI">DNI</label>
-                <input type="text" name="DNI" id="DNI" placeholder="99.999.999" autocomplete="none">
+                <input type="text" name="DNI" id="dni" placeholder="99.999.999" autocomplete="none">
             </div>
             
             <div class="div3">
@@ -141,29 +142,28 @@
                 <input type="tel" name="telefono" id="telefono" placeholder="011 12345678">
             </div>
             <div id="r-buttons">
-                <button id="reservar-ok">Reservar</button>
+                <button type="submit" id="reservar-ok">Reservar</button>
                 <button id="reservar-no">Cancelar</button>
             </div>
         </form>
     </main>
-    <footer>
+    <footer>         
         <div class="caja1">
             <figure>    
                 <img src="img/android-chrome-192x192.png" alt="logo">
             </figure>
         </div>
         <div class="caja2">
-            <h2>SOBRE NOSOTROS</h2>
-            <p>(ignorando el heco de que explotamos infantes) somos buenos :3 </p>
+            <p>&copy; 2023 Parador Cóndor - Nogolí, San Luis</p>
         </div>
         <h2 class ="social">SIGUENOS</h2>
         <div class="caja3">  
-        <div class="redes">
+            <div class="redes">
                 <a href="#" class="fa fa-facebook"></a>
                 <a href="#" class="fa fa-twitter"></a>
                 <a href="#" class="fa fa-instagram"></a>
                 <a href="#" class="fa fa-whatsapp"></a>
-        </div>
+            </div>
         </div>
     </footer>
 </body>
