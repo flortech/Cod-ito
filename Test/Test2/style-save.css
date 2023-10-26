@@ -1,0 +1,453 @@
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*ESTILOS DE HEADER - SOLO NICO*/
+body {
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+.background{
+    position: fixed;
+    z-index: -1;
+}
+header{
+    background-color: #353535    ;
+    align-items:center ;
+    justify-content: center;
+    display: flex;
+    height: 85px;
+    padding: 5px 10%;
+    align-self: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+
+header .logo img{
+    max-height: 60px;
+    width: auto;
+}
+
+header .links-nav{
+    display: flex;
+    list-style: none;
+}
+
+
+header .links-nav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header .links-nav li:hover{
+    transform: scale(1.1);
+    filter: brightness(150%);
+}
+
+header .links-nav a {
+    font-size: 30px;
+    color:   #bcb78a;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*ESTILO FOOTER - SOLO NICO*/
+footer{
+    background-color:#353535 ;
+    margin-top: auto;
+    padding: 5px 10%;
+    display: grid ;
+    padding: 0 20px;
+    grid-template-columns:repeat(1fr,12);
+    align-content: center;
+    justify-content: space-around;
+}
+footer div {
+    color:   #bcb78a;
+}
+footer .caja1 figure img{
+    max-height: 55%;
+    height: 50%;
+    padding: 1rem;
+    margin: 1rem;
+}
+footer .caja1{
+    grid-column: 0/2;
+}
+.caja2{
+    align-self: center;
+    grid-column: 2/4;
+}
+.caja3{
+    grid-column: 6/12;
+    align-self: center;
+}
+.social {
+    align-self: center;
+    grid-column: 4/6;
+    color:   #bcb78a;
+}
+.redes a { 
+    text-decoration: none;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #314652;
+    color: #ffffff;
+    border-radius: 50%;
+  }
+.redes{
+    justify-content: space-around;
+    display: flex;
+ }
+  
+/*/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*ESTILO INDEX - SOLO MATIAS*/
+#index-main{
+    background-color: #ffffff15;
+    margin: 20px 0;
+    cursor: default;
+}
+
+.bienvenido{
+    padding: 20px;
+    margin: 10px 10px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: #314652;
+    gap: 20px;
+    align-items: center;
+    border-radius: 15px;
+    height: 85vh;
+}
+.dos{
+    background-color: #bcb78a;
+
+}
+#dos{
+    color: #314652;
+    font-size: 3rem;
+    justify-self: left;
+    grid-column: 2;
+}
+
+#bienvenidoh1{
+    color:#ffffff33;
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    justify-items: center;
+    z-index: 1;
+}
+
+#bienvenidoh1>h1{
+    justify-self: left;
+    font-size: 3rem;
+   
+}
+
+#welcomeimg1{
+    opacity: 90%;
+    width: auto;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    clip-path: circle(65.2% at 90% 45%);
+}
+
+#welcomeimg2{
+    opacity: 90%;
+    width: auto;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(65.1% at 14% 52%);
+    
+}
+#bienvenidoh2{
+    display: grid;
+    grid-template-columns: 1fr 45%;
+    justify-items: right;
+}
+#bienvenidoh2>p{
+    grid-column: 2;
+    align-self: flex-end;
+}
+
+#index-main p{
+    color: #ffffff;
+}
+/*ESTILO PROPUESTA TURISTICA - SOLO MATIAS*/
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*ESTILOS RESERVAS - SOLO FACUNDO*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.background{
+    position: fixed;
+    width: 100vw;
+    top:-300px;
+    height: auto;
+    z-index: -1;
+}
+
+
+
+.reservas{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+.caracteristicas{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: start;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: center;
+    margin-bottom: 15px;
+}
+
+
+h1,h2,h3{
+    color: #bcb78a;
+}
+h1{
+    grid-column: 1/12;
+}
+
+li{
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+button{
+    border-radius: 15px;
+    background-color:#bcb78a;
+    height: 3rem;
+    min-width: 20%;
+    max-width: 50%;
+    border-style: none;
+    box-shadow: 0 0 5px 0 #353535;
+    margin: 10px;
+    color: #314652;
+}
+
+button:hover{
+    background-color: #ffffff;
+    transition: 1s;
+}
+
+#reservar-ok:hover{
+    background-color: #D5B9B2;
+    transition: 1s;
+    
+}
+#reservar-no:hover{
+    background-color: #f13000;
+    transition: 1s;
+    
+}
+
+
+.cabañasbox,.bungalowsbox{
+    background-color: #225253d0;
+    width: 95%;
+    padding: 15px;
+    margin: 0 15px;
+    overflow: hidden;
+    height: 60%;
+    transition: height 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow:  0 -10px 15px 5px #353535a8 inset;
+}
+
+.cabañasbox.info-visible,
+.bungalowsbox.info-visible{
+    height: auto;
+    box-shadow: 0 0 15px 1px #353535a8;
+}
+.carrusel{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    overflow: hidden;
+
+}
+.carrusel>img{
+    height: 10rem;
+    
+}
+
+.section-reserva{
+ 
+    display: none;
+   
+}
+
+.section-reserva.mostrar {
+    margin: 15px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    min-height: 200px;
+    align-items: center;
+    font-size: 1rem;
+    position: fixed;
+    top:0;
+    left: 7%;
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    box-shadow: #353535 0 0 20px 10px;
+    background-color: rgba(81, 90, 92, 0.911); 
+    z-index: 1000; 
+    transition: opacity 0.5s ease; 
+}
+
+.section-reserva>div>input{
+    font-size: 1rem;
+    text-align: center;
+    height: 2rem;
+    border-radius: 15px;
+}
+
+.section-reserva>div{
+    padding: 20px;
+}
+.section-reserva>h3{
+    grid-column: 1/13;
+}
+
+.div1{
+    grid-column: 1/5;
+}
+.div2{
+    grid-column: 5/9;
+}
+.div3{
+    grid-column: 9/13;
+}
+.div4{
+    grid-column: 1/5;
+}
+.div5{
+    grid-column: 5/9;
+}
+.div6{
+    grid-column: 9/13;
+}
+.div7{
+    grid-column: 1/7;
+}
+.div8{
+    grid-column: 7/13;
+}
+
+#reservar-ok, #reservar-no{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    width: 50%;
+    min-width: fit-content;
+}
+.section-reserva #reservar-ok{
+    grid-column: 1/7;
+    justify-self: center;
+}
+
+.section-reserva #reservar-no{
+    grid-column: 7/13;
+    justify-self: center;
+}
+
+.section-reserva label{
+    color:#D5B9B2;
+    font-size: 1.2rem;
+}
+
+.section-reserva div select{
+    font-size: 1rem;
+}
+
+/*////////////////////////////////////contactos SOLO TINCHO/////////////////////////////////////////////*/
+
+.c-datos {
+    background-image: url('./IMG/DiqueNogoli.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.c-datos>section {
+background-color: rgba(255, 255, 255, 0.363);
+margin: 20px;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.c-datos form {
+margin-top: 10px;
+}
+
+.c-datos label {
+display: block;
+margin-bottom: 5px;
+color: #67ac5b;
+}
+
+.c-datos input[type="text"],
+.c-datos input[type="email"],
+textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #67AC5B;
+border-radius: 5px;
+}
+
+.c-datos input[type="submit"] {
+background-color: #67AC5B;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.c-datos input[type="submit"]:hover {
+background-color: #080808;
+}
+.c-mapa{
+padding: 20px;
+overflow: hidden;
+}
+
+@media screen and (max-with: 768px){
+    .caracteristicas{
+        display: block;
+        }
+}
