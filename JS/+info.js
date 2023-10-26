@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       intervalo = setInterval(function () {
         carousel.scrollLeft += step * direction;
 
-        // se verifica si llega al final y cambia direc
+
         if (
           direction === 1 &&
           carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth
@@ -71,15 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  /*carousel.addEventListener("mouseenter", () => {
-    stop();
-  });
-
-  carousel.addEventListener("mouseleave", () => {
-    if (!scrolling) {
-      start();
-    }
-  });*/
 
   start();
 });
