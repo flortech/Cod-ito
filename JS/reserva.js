@@ -17,18 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             const datos = new FormData(formulario);
 
-            const datosCompletos = {};
-            datos.forEach((value, key) => {
-                datosCompletos[key] = value;
-            });
-
             const response = await fetch("http://127.0.0.1:5000/registros", {
                 method: "POST",
-                mode: "no-cors",
                 headers: {
-                    "Content-Type": "application/json",
+                    // No es necesario establecer Content-Type para FormData
                 },
-                body: JSON.stringify(datosCompletos),
+                body: datos,
             });
 
             if (!response.ok) {
