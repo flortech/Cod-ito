@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const enviarbtn = document.getElementById("reservar-ok");
+    const formulario = document.querySelector('#formulario');
     
     const emailValido = email => {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -10,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const nombre = document.getElementById("nombre");
         const dni = document.getElementById("dni");
         const email = document.getElementById("email");
-        const tel = document.getElementById("telefono");
-
+        const tel = document.getElementById("tel");
+        
         if (nombre.value == "" || nombre.value.length == 0) {
             alert("Ingrese su nombre por favor");
             nombre.focus();
@@ -38,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return false;
         }
 
+        procesadatos();
+
         cerrarmenu();
         alert("Sus datos se enviaron correctamente");
         return true;
@@ -46,6 +49,24 @@ document.addEventListener("DOMContentLoaded", function () {
     function cerrarmenu() {
         var sectionReserva = document.querySelector(".section-reserva");
         sectionReserva.classList.remove("mostrar");
+    }
+
+    function procesadatos() {
+        const form = document.getElementById('formulario');
+        const datos = new FormData(form);
+        const datoscompletos = {};
+    
+        datos.forEach((value, key) => {
+            datoscompletos[key] = value;
+        });
+    
+        fetch("http://Randomdev90.pythonanywhere.com", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(datoscompletos),
+        });
     }
 
     enviarbtn.addEventListener('click', validacion);

@@ -99,7 +99,7 @@
             </div>
         </section>
 
-        <form class="section-reserva" onsubmit="return validacion()">
+        <form class="section-reserva" id="formulario" onsubmit="return validacion()">
             <h3>Datos de reserva</h3>
             <div class="div1">
                 <label for="nombre">Nombre y Apellido</label>
@@ -107,28 +107,28 @@
             </div>
 
             <div class="div2">   
-                <label for="DNI">DNI</label>
+                <label for="dni">DNI</label>
                 <input type="text" name="DNI" id="dni" placeholder="99.999.999" autocomplete="none">
             </div>
             
             <div class="div3">
-                <label for="cantidadpers">Cantidad</label>
-                <input type="number" name="cantidadpers"  id="cantidadpers" max="6" min="1" placeholder="1">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" name="cantidad"  id="cantidad" max="6" min="1" placeholder="1">
             </div>
 
             <div class="div4">
-                <label for="date-enter">Fecha Entrada</label>
-                <input type="date" name="date" id="date-enter" autocomplete="bday-month">
+                <label for="entrada">Fecha Entrada</label>
+                <input type="date" name="entrada" id="entrada" autocomplete="bday-month">
             </div>
 
             <div class="div5">
-                <label for="date-out">Fecha Salida</label>
-                <input type="date" name="date" id="date-out" autocomplete="bday-month">
+                <label for="salida">Fecha Salida</label>
+                <input type="date" name="salida" id="salida" tocomplete="bday-month">
             </div>
 
             <div class="div6">
-                <label for="type">Tipo</l>
-                <select name="type" id="type">
+                <label for="tipo">Tipo</l>
+                <select name="tipo" id="tipo">
                     <option>Cabaña</option>
                     <option>Bungalow</option>                
                 </select>
@@ -138,8 +138,8 @@
                 <input type="email" name="email" id="email" placeholder="example@example.com" autocomplete="email">
             </div>
             <div class="div8">
-                <label for="telefono">Telefono</label>
-                <input type="tel" name="telefono" id="telefono" placeholder="011 12345678">
+                <label for="tel">Telefono</label>
+                <input type="tel" name="tel" id="tel" placeholder="011 12345678">
             </div>
             <div id="r-buttons">
                 <button type="submit" id="reservar-ok">Reservar</button>
