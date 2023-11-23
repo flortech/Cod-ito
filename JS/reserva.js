@@ -1,77 +1,89 @@
 document.addEventListener("DOMContentLoaded", function () {
     const enviarbtn = document.getElementById("reservar-ok");
-    const formulario = document.querySelector('#formulario');
-    
-    const emailValido = email => {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const formulario = document.getElementById('formulario');
+
+    const emailValido = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    const mostrarAlerta = (mensaje) => {
+        alert(mensaje);
     }
 
-    const validacion = (e) => {
+    const cerrarMenu = () => {
+        const sectionReserva = document.querySelector(".section-reserva");
+        sectionReserva.classList.remove("mostrar");
+    }
+
+    const procesarDatos = async () => {
+        try {
+            const datos = new FormData(formulario);
+
+            const datosCompletos = {};
+            datos.forEach((value, key) => {
+                datosCompletos[key] = value;
+            });
+
+            const response = await fetch("http://127.0.0.1:5000/registros", {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(datosCompletos),
+            });
+
+            if (!response.ok) {
+                throw new Error("Error al enviar datos");
+            }
+
+            mostrarAlerta("Sus datos se enviaron correctamente");
+        } catch (error) {
+            console.error("Error:", error);
+            mostrarAlerta("Hubo un problema al enviar los datos");
+        }
+    };
+
+    const validarFormulario = (e) => {
         e.preventDefault();
+
         const nombre = document.getElementById("nombre");
         const dni = document.getElementById("dni");
         const email = document.getElementById("email");
         const tel = document.getElementById("tel");
-        
-        if (nombre.value == "" || nombre.value.length == 0) {
-            alert("Ingrese su nombre por favor");
+
+        if (nombre.value.trim() === "") {
+            mostrarAlerta("Ingrese su nombre por favor");
             nombre.focus();
             return false;
         }
-        if (dni.value == "" || dni.value.length == 0) {
-            alert("Ingrese su DNI por favor");
+
+        if (dni.value.trim() === "") {
+            mostrarAlerta("Ingrese su DNI por favor");
             dni.focus();
             return false;
         }
-        if (email.value == "") {
-            alert("Ingrese su correo");
+
+        if (email.value.trim() === "") {
+            mostrarAlerta("Ingrese su correo");
             email.focus();
             return false;
         }
+
         if (!emailValido(email.value)) {
-            alert("Ingrese un correo válido por favor");
+            mostrarAlerta("Ingrese un correo válido por favor");
             email.focus();
             return false;
         }
-        if (tel.value == "" || /^\s+$/.test(tel.value)) {
-            alert("Ingrese un teléfono de contacto");
+
+        if (tel.value.trim() === "" || /^\s+$/.test(tel.value)) {
+            mostrarAlerta("Ingrese un teléfono de contacto");
             tel.focus();
             return false;
         }
 
-        procesadatos();
-
-        cerrarmenu();
-        alert("Sus datos se enviaron correctamente");
+        procesarDatos();
+        cerrarMenu();
         return true;
-    }
+    };
 
-    function cerrarmenu() {
-        var sectionReserva = document.querySelector(".section-reserva");
-        sectionReserva.classList.remove("mostrar");
-    }
-
-    function procesadatos() {
-        const form = document.getElementById('formulario');
-        const datos = new FormData(form);
-        const datoscompletos = {};
-        console.log(datoscompletos);
-        
-        datos.forEach((value, key) => {
-            datoscompletos[key] = value;
-        });
-    
-        fetch("http://127.0.0.1:5000/registros", {
-            method: "POST",
-            mode:"no-cors",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(datoscompletos),
-        });
-        
-    }
-
-    enviarbtn.addEventListener('click', validacion);
+    enviarbtn.addEventListener('click', validarFormulario);
 });
-
