@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             datoscompletos[key] = value;
         });
     
-        fetch("https://Randomdev90.pythonanywhere.com", {
+        fetch("https://Randomdev90.pythonanywhere.com/registros", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
