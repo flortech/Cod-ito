@@ -55,18 +55,21 @@ document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById('formulario');
         const datos = new FormData(form);
         const datoscompletos = {};
-    
+        console.log(datoscompletos);
+        
         datos.forEach((value, key) => {
             datoscompletos[key] = value;
         });
     
-        fetch("http://Randomdev90.pythonanywhere.com", {
+        fetch("http://127.0.0.1:5000/registros", {
             method: "POST",
+            mode:"no-cors",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(datoscompletos),
         });
+        
     }
 
     enviarbtn.addEventListener('click', validacion);
