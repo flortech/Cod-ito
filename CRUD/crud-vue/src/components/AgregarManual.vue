@@ -103,9 +103,9 @@
                     });
 
                     if (response.ok) {
-                            // La solicitud fue exitosa
+
                         console.log('Registro enviado con éxito');
-                        this.$emit('registro-exitoso');
+                        
                         this.error = false;
                         this.correcto = true;
                         this.procesando = false;
@@ -122,7 +122,7 @@
                             };
                         
                     } else {
-                        // La solicitud falló
+
                         console.error('Error al enviar el registro');
                         }
                 } catch (error) {
@@ -141,8 +141,8 @@
             telInvalido(){
                 return this.persona.tel.length < 1;
             },
-        }
-
+        },
+        
     };
 </script>
 
