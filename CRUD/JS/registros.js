@@ -3,7 +3,7 @@ createApp({
     data() {
         return {
             registros: [],
-            url: 'http://randomdev90.pythonanywhere.com/registros', // si ya lo subieron a pythonanywhere
+            url: 'http://127.0.0.1:5000/registros', // si ya lo subieron a pythonanywhere
             error: false,
             cargando: true,
             /*atributos para el guardar los valores del formulario */

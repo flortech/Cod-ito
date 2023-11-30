@@ -14,7 +14,7 @@ createApp({
             entrada:"",
             salida:"",
             dni:"",
-            url: 'http://Randomdev90.pythonanywhere.com/registros/' + id,
+            url: 'http://127.0.0.1:5000/registros/' + id,
         }
     },
     methods: {
