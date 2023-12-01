@@ -79,5 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return true;
     };
 
+
     enviarbtn.addEventListener('click', validarFormulario);
+
+  
 });
