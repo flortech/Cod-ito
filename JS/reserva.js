@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             const datos = new FormData(formulario);
 
-            const response = await fetch("http://127.0.0.1:5000/registros", {
+            const response = await fetch("https://facundorua.pythonanywhere.com/registros", {
                 method: "POST",
                 headers: {
                     // No es necesario establecer Content-Type para FormData
